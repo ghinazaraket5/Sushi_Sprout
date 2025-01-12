@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>our menu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/menu.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    </head>
+    <body>
+        <section id="menu">
+        <div class="container mb-5">
+            <div id="RICE" class="mb-5">
+                <h2 class="text-center mb-4">RICE</h2>
+                <div class="row gy-4">
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/fried rice with shrimps.jpg" class="img-fluid rounded" alt="Fried Rice with Shrimps">
+                        <h5 class="mt-2">FRIED RICE WITH SHRIMPS</h5>
+                        <p>$15</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/teriyaki.jpg" class="img-fluid rounded" alt="Teriyaki">
+                        <h5 class="mt-2">TERIYAKI </h5>
+                        <p>$20</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/orange chicken.jpg" class="img-fluid rounded" alt="Orange Chicken">
+                        <h5 class="mt-2">ORANGE CHICKEN</h5>
+                        <p>$18</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/vegetable fried.jpg" class="img-fluid rounded" alt="Vegetable Fried">
+                        <h5 class="mt-2">VEGETABLE FRIED </h5>
+                        <P>$21</P>
+                    </div>
+                </div>
+            </div>
+            <div id="SOUP" class="mb-5">
+                <h2 class="text-center mb-4">SOUP</h2>
+                <div class="row gy-4">
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/egg drop.jpg" class="img-fluid rounded" alt="Egg Drop">
+                        <h5 class="mt-2">EGG DROP </h5>
+                        <p>$17</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/chicken rice.jpg" class="img-fluid rounded" alt="Chicken Rice">
+                        <h5 class="mt-2">CHICKEN RICE </h5>
+                        <p>$16</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/hot sour.jpg" class="img-fluid rounded" alt="Hot Sour">
+                        <h5 class="mt-2">HOT SOUR</h5>
+                            <p>$15</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/mushroom noodle soup.jpg" class="img-fluid rounded" alt="Mushroom Noodle Soup">
+                        <h5 class="mt-2">MUSHROOM NOODLE SOUP </h5>
+                        <p>$18</p>
+                    </div>
+                </div>
+            </div>
+            <div id="NOODLES">
+                <h2 class="text-center mb-4">NOODLES</h2>
+                <div class="row gy-4">
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/chow min noodles.jpg" class="img-fluid rounded" alt="Chow Mein">
+                        <h5 class="mt-2">CHOW MEIN </h5>
+                        <p>$16</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/cold noodles.jpg" class="img-fluid rounded" alt="Cold Noodles">
+                        <h5 class="mt-2">COLD NOODLES </h5>
+                        <p>$15</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/spicy noodles.jpg" class="img-fluid rounded" alt="Spicy Noodles">
+                        <h5 class="mt-2">SPICY NOODLES </h5>
+                        <p>$19</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./menu/egg with noodles.jpg" class="img-fluid rounded" alt="Egg with Noodles">
+                        <h5 class="mt-2">EGG WITH NOODLES </h5>
+                        <p>$15</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container1 my-5">
+        <h2 class="text-center mb-4">Suggest a Dish for Our Menu</h2>
+        <form onsubmit="handleFormSubmit(event)">
+            <div class="element">
+            <div class="mb-3">
+                <label for="dishName" class="form-label">Dish Name</label>
+                <input type="text" class="form-control" id="dishName" name="dishName" placeholder="Enter the dish name" required>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" id="category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Soup">Soup</option>
+                    <option value="Noodles">Noodles</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Drinks">Drinks</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Provide a brief description of the dish"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Suggested Price ($)</label>
+                <input type="number" class="form-control" id="price" name="price" min="1" step="0.01" placeholder="Enter the price">
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload an Image (Optional)</label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+            </div>
+
+            <div class="mb-3">
+                <label for="notes" class="form-label">Allergens or Special Notes</label>
+                <textarea class="form-control" id="notes" name="notes" rows="2" placeholder="Mention any allergens or special instructions"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contact Information (Optional)</label>
+                <input type="email" class="form-control" id="contact" name="contact" placeholder="Enter your email">
+            </div>
+            <button type="submit" class="btn btn-primary ">Submit Suggestion</button>
+        </div>
+        </form>
+        <div id="thankYouMessage" style="display: none; margin-top: 20px;" class="alert alert-success">
+            Thank you for your suggestion! We appreciate your input.
+        </div>
+
+        <script>
+            function handleFormSubmit(event) {
+                event.preventDefault();
+                const dishName = document.getElementById('dishName').value.trim();
+                const category = document.getElementById('category').value;
+                const notes = document.getElementById('notes').value;
+                const price = document.getElementById('price').value;
+                if (!dishName || !category || !notes || !price ) {
+                    alert("Please fill in all required fields.");
+                    return; 
+                }
+                alert("Thank you for your suggestion! We appreciate your input.");
+            }
+        </script>
+        
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

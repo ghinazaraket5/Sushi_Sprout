@@ -1,0 +1,54 @@
+body {
+    background: black;
+    color: rgb(194, 194, 178);
+    font-family: 'Arial', sans-serif; 
+}
+
+h1 {
+    color: rgb(236, 236, 185);
+    text-align: center;
+    font-family: "Lugrasimo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#story{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p {
+    font-family: 'Passions Conflict', serif;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.6;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: rgb(255, 255, 255);
+    word-spacing: 10px;
+    border: 1px solid rgb(236, 236, 185);
+    padding: 20px;
+    box-shadow: 2px 2px 4px white;
+}
+ span {
+    color: rgb(236, 236, 185);
+    font-weight: 600;
+}
+
+.row{
+    align-items: end;
+}
+.row img {
+    margin-top: 10px;
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    border-radius: 15%; 
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}

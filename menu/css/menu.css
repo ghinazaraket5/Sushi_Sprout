@@ -1,0 +1,128 @@
+body{
+    font-family: "Lugrasimo", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+#menu{
+    background-color: black;
+}
+
+.container {
+    background-color: rgb(0, 0, 0);
+}
+
+.container h2{
+    font-family: "Lugrasimo", serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color:rgb(236, 236, 185);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.container .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container .col-md-6 {
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgb(236, 236, 185);
+    margin: 30px;
+    padding: 20px;
+    border-radius: 3%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .col-md-6:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.col-md-6 img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.col-md-6 h5 {
+    font-family: "Lugrasimo", serif;
+    font-size: 12px;
+    color: rgb(236, 236, 185);
+    margin: 5px 0;
+
+}
+.col-md-6 p {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+html{
+    background-color: black;
+}
+
+.container1 .mb-3{ 
+    background-color: rgb(0, 0, 0);
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color:transparent;
+    padding: 20px;
+    border: 1px solid rgb(236, 236, 185);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container1 h2{
+    color:rgb(236, 236, 185);
+    font-family: "Lugrasimo", serif;
+    text-align: center;
+    color:rgb(236, 236, 185);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+form .form-label {
+    font-weight: bold;
+    color:rgb(236, 236, 185);
+}
+
+form .form-control,
+form .form-select {
+    border: 1px solid rgb(236, 236, 185);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: rgb(213, 213, 159);
+
+}
+
+form .form-control:focus,
+form .form-select:focus {
+    border-color: #cacaca;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+form .btn{
+    color: rgb(236, 236, 185);
+    background-color: transparent;
+    border: 1px solid rgb(236, 236, 185);
+}
+
+
+form .btn:hover {
+    background-color: rgb(236, 236, 185);
+    color:black;
+}
+

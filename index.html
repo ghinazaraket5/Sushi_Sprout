@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is a responsive website built with Bootstrap.">
+        <meta name="keywords" content="HTML, CSS, Bootstrap, JavaScript">
+        <title>sushi sprout</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSkt1pqm3vc3YG6k3Bb6hZ2Ehh7r9ENfQAKGyyl/uKN" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <img src="./img/2024-12-27__1_-removebg-preview.png">
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#offer">Offers</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <div class="container">
+                <h1 class="text-primary mt-4">Welcome to <span class="primary">SUSHI SPROUT</span></h1>
+                <p class="lead text-muted mt-2">
+                 here you can find most delicacies food in the world</p>
+
+                <button id="showFormButton" class="btn btn-primary mb-3">Book a Table</button>
+                <div id="bookingFormContainer" style="display: none;">
+                    <form id="bookingForm" onsubmit="return validateForm()">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName"  required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email"  required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookingDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="bookingDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Time </label>
+                            <input type="time" id="time" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="guests">NUMBER OF OUR GUESTS:</label>
+                            <input type="number" id="guests" min="1" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Booking</button>
+                    </form>
+                </div>
+            </div>
+            <script>
+                document.getElementById('bookingDate').min = new Date().toISOString().split('T')[0];
+                document.getElementById('showFormButton').addEventListener('click', function() {
+                document.getElementById('bookingFormContainer').style.display = 'block';
+                document.getElementById('showFormButton').style.display = 'none'; 
+                });
+                function validateForm() {
+                let form = document.getElementById('bookingForm');
+                let isValid = true;
+            }
+                form.querySelectorAll('.is-invalid').forEach(function(input) {
+                    input.classList.remove('is-invalid');
+                });
+                function validateForm() {
+                    let fullName = document.getElementById('fullName').value;
+                    let email = document.getElementById('email').value;
+                    let phone = document.getElementById('phone').value;
+                    let bookingDate = document.getElementById('bookingDate').value;
+                    let time = document.getElementById('time').value;
+                    let guests = document.getElementById('guests').value;
+                if (fullName && bookingDate && email && phone && time &&guests) {
+                alert(`Booking request submitted for ${fullName} on ${bookingDate} at ${time} for ${guests} guest(s).`);
+                bookingFormContainer.style.display = 'none';
+                bookingForm.reset();
+            } else {
+                alert('Please fill in all required fields.');
+                }
+        
+                return false;
+            }
+            </script>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="pt-5">
+                <div class="container">
+                    <div class="title">
+                        <h2>Sushi prout History</h2>
+                        <p>more than 35+ years of experiance</p>
+                    </div>
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>"In the heart of every cherished recipe lies a story, one that weaves together tradition, family, and the joy of sharing a meal. For centuries, food has been more than sustenance—it has been a way to connect, to celebrate, and to create memories. At <span class="primary-text">Sushi Sprout </span>, we honor this timeless tradition by sharing a tale that has inspired our dishes and the warmth we bring to every table."</p>
+                        <a href="./about us/about.html" class="btn btn-primary mb-3">LEARN MORE</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./img/about.jpg">
+                    </div>
+                  </div>
+                </div>
+        </section>
+
+
+
+        <section id="offer" class="py-5">
+            <div class="container">
+              <h2 class="primary ">Our Special Offers</h2>
+              <p>more than 35+ years of experiance</p>
+              <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card">
+                    <img src="./img/chinese food/tofu.jpg" class="card-img-top" alt="Offer 1">
+                      <h5 class="card-title">Tufo</h5>
+                      <p class="card-text">In the hands of a skilled cook, tofu becomes a masterpiece</p>
+                      <p><del>$12.00</del><span>$6.00</span></p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card">
+                    <img src="./img/chinese food/dim sum.jpg" class="card-img-top" alt="Offer 2">
+                      <h5 class="card-title">Dim Sum</h5>
+                      <p class="card-text">In the world of dim sum, happiness comes in small, delicious bites</p>
+                      <p><del>$20.00</del><span>$12.00</span></p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card">
+                    <img src="./img/chinese food/sashimi.jpg" class="card-img-top" alt="Offer 3">
+                    
+                      <h5 class="card-title">Sashimi</h5>
+                      <p class="card-text">Behold the power of fish and rice!</p>
+                      <p><del>$22.00</del><span>$13.00</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="menu" class="py-5">
+            <div class="container">
+                <h2 class="primary ">Our Menu</h2>
+                <p>“Where flavor meets tradition, and every bite tells a story”</p>
+                <div class="row g-4"> 
+                <div class="col-12 col-md-6 mb-4 ">
+                    <div class="card1">
+                        <img src="img/chinese food/tuna roll.jpg" class="card-img-top">
+                        <h5 class="card-title">Tuna Roll</h5>
+                        <p>$6.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/alaska.jpg" class="card-img-top">
+                        <h5 class="card-title">Alaska</h5>
+                        <p>$8.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/rainbow roll.jpg" class="card-img-top">
+                        <h5 class="card-title">Rainbow Roll</h5>
+                        <p>$10.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/crab roll.jpg" class="card-img-top">
+                        <h5 class="card-title">crab Roll</h5>
+                        <p>$12.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/cooked salmon.jpg" class="card-img-top">
+                        <h5 class="card-title">Cooked Salmon</h5>
+                        <p>$8.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/smoked salmon.jpg" class="card-img-top">
+                        <h5 class="card-title">Smoked Salmon</h5>
+                        <p>$18.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/tangerine.jpg" class="card-img-top">
+                        <h5 class="card-title">Tangerine</h5>
+                        <p>$10.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/mixed.jpg" class="card-img-top">
+                        <h5 class="card-title">Mixed</h5>
+                        <p>$13.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/shrimp roll.jpg" class="card-img-top">
+                        <h5 class="card-title">Shrimp Roll</h5>
+                        <p>$11.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="card1">
+                        <img src="img/chinese food/cream cheese.jpg" class="card-img-top">
+                        <h5 class="card-title">Cream Cheese</h5>
+                        <p>$16.00</p>
+                    </div>
+                  </div>
+                  <a href="/menu/menu.html" class="btn btn-primary mb-3">View Full Menu</a>
+                </div>
+              </section>
+
+              <section id="daytime">
+                <div class="container py-5">
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-4">
+                            <div class="item3">
+                                <img src="img/breakfast-removebg-preview.png" alt="Breakfast">
+                                <h3>BREAKFAST</h3>
+                                <p>08:00 am to 10:00 am</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="item3">
+                                <img src="img/lunch-removebg-preview.png" class="img-fluid mb-3" alt="Lunch">
+                                <h3>LUNCH</h3>
+                                <p>12:00 pm to 04:00 pm</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="item3">
+                                <img src="img/dinner-removebg-preview.png" class="img-fluid mb-3" alt="Dinner">
+                                <h3>DINNER</h3>
+                                <p>05:00 pm to 12:00 am</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="item3">
+                                <img src="img/dessert1-removebg-preview.png" class="img-fluid mb-3" alt="Dessert">
+                                <h3>DESSERT</h3>
+                                <p>All day long</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="py-5">
+              <div class="container">
+                  <div class="contentofcontact row">
+                      <div class="col-md-4 mb-4">
+                          <div class="info">
+                              <div>
+                                  <h3 class="mb-3">ADDRESS</h3>
+                                  <p><i class="fa-solid fa-location-pin"></i> Sainte Therese St., Al Hadath, Mont-Liban</p>
+                                  <p><i class="fa-solid fa-phone"></i> +961 81 086 275</p>
+                                  <p><i class="fa-solid fa-envelope"></i> Ghinazrk@gmail.com</p>
+                              </div>
+                              <div>
+                                  <h3 class="mb-3">WORKING HOURS</h3>
+                                  <p>08:00 am to 12:00 am on weekdays</p>
+                                  <p>08:00 am to 02:00 am on weekends</p>
+                              </div>
+                              <div>
+                                  <h3 class="mb-3">FOLLOW US</h3>
+                                  <a href="" class="btn1 btn-outline-primary btn-sm m-1"><i class="fa-brands fa-facebook"></i></a>
+                                  <a href="" class="btn1 btn-outline-danger btn-sm m-1"><i class="fa-brands fa-instagram"></i></a>
+                                  <a href="" class="btn1 btn-outline-info btn-sm m-1"><i class="fa-brands fa-twitter"></i></a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-8">
+                        <form id="informations" class="shadow p-4 rounded bg-light">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" name="name" id="name" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" name="email" id="contactemail" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" name="subject" id="subject" class="form-control"required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea name="message" id="message" class="form-control" cols="30" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const form = document.getElementById('informations');
+                    form.addEventListener('submit', (event) => {
+                        event.preventDefault();
+                        const name = document.getElementById('name').value.trim();
+                        const email = document.getElementById('contactemail').value.trim();
+                        const subject = document.getElementById('subject').value.trim();
+                        const message = document.getElementById('message').value.trim();
+                        if (name&& email && subject && message) {
+                            alert(`Thank you, ${name}! Your message has been submitted.\n\nDetails:\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`);
+                            form.reset();
+                        }
+                    });
+                });
+            </script>
+
+
+
+        </section>
+      </main>
+      <footer id="footer" class="bg-dark text-center text-light py-4">
+        <div class="container">
+            <p class="mb-0">Copyright &copy; 2025 All rights reserved | Made by <b>GHINA ZARAKET</b></p>
+        </div>
+    </footer>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76ApsE2noWHM8YFZkfJ4StR9ABzq2zQ6cqaeCGKnK2KgtfBIflIYOf4yCeF2dkn" crossorigin="anonymous"></script>
+    </body>
+</html>
