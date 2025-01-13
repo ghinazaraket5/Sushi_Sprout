@@ -17,9 +17,9 @@ h1 {
     align-items: center;
 }
 p {
-    font-family: 'Passions Conflict', serif;
+    font-family: "Lugrasimo", serif;
+    font-weight: 400;
     font-size: 15px;
-    font-weight: 900;
     line-height: 1.6;
     text-align: center;
     margin-left: 50px;
