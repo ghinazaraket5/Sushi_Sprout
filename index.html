@@ -82,6 +82,14 @@
                 document.getElementById('bookingFormContainer').style.display = 'block';
                 document.getElementById('showFormButton').style.display = 'none'; 
                 });
+                document.addEventListener('click', function(event) {
+        let formContainer = document.getElementById('bookingFormContainer');
+        let showButton = document.getElementById('showFormButton');
+        if (!formContainer.contains(event.target) && event.target !== showButton) {
+            formContainer.style.display = 'none';
+            showButton.style.display = 'block';
+        }
+    });
                 function validateForm() {
                 let form = document.getElementById('bookingForm');
                 let isValid = true;
