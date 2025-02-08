@@ -335,8 +335,8 @@
         </div>
     </section>
     <div class="container1 my-5">
-        <h2 class="text-center mb-4">Suggest a Dish for Our Menu</h2>
-        <form onsubmit="handleFormSubmit(event)">
+        <button class="text2-center mb-4" onclick="toggleFormVisibility() ">Suggest a Dish for Our Menu</button >
+        <form id="suggestionForm" onsubmit="handleFormSubmit(event)" style="display: none;">
             <div class="element">
             <div class="mb-3">
                 <label for="dishName" class="form-label">Dish Name</label>
@@ -382,6 +382,15 @@
         </div>
 
         <script>
+            function toggleFormVisibility() {
+        const form = document.getElementById('suggestionForm');
+        if (form.style.display === 'none' || form.style.display === '') {
+            form.style.display = 'block';
+        } else {
+            form.style.display = 'none';
+        }
+        button.style.display = 'none';
+    }
             function handleFormSubmit(event) {
                 event.preventDefault();
                 const dishName = document.getElementById('dishName').value.trim();
