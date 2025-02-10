@@ -268,7 +268,7 @@ span{
     margin: 30px;
     padding: 0px;
 }
-.card1{
+.col-12 .card1{
     border: 1px solid rgb(236, 236, 185);
     border-radius: 3%;
     width:200px;
