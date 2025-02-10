@@ -512,9 +512,15 @@ span{
     #offer{
         padding: 10px;
     }
-    .col-12{
+    #offer .col-12{ 
         width: 250px;
         height: 250px;
+    }
+    .card1{
+
+        width:250px;
+        height:250px;
+    
     }
     .card img {
         width: 150px;
