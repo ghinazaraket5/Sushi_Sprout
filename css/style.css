@@ -293,7 +293,7 @@ span{
     margin: 10px;
     padding-bottom:20px;
  }
-.card1:hover{ 
+.col-12 .card1:hover{ 
     transform: scale(1.05);
     box-shadow: 0 10px 20px  rgb(236, 236, 185);
 }
