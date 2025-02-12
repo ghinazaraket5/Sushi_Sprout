@@ -174,11 +174,12 @@ span{
     display: flex;
     justify-content: space-between;
 }
- .row img{
+#about .row img{
     width: 100%;
     width:350px;
     height: 350px;
     border-radius: 6%;
+    margin-left:200px;
 }
 #about .col-md-6 {
     flex: 1;
@@ -348,7 +349,7 @@ span{
 
 /*contact*/
 #CONTACT {
-    margin-top: 100px;
+    margin-top: 200px;
     padding: 2rem 0;
     background-color: black;
 }
@@ -373,7 +374,7 @@ span{
 }
 
 .info h3 {
-    margin-top:100px;
+    margin-top:50px;
     font-size: 28px;
     color:  rgb(236, 236, 185);
     margin-bottom: 10px;
@@ -394,7 +395,7 @@ span{
 }
 
 #informations {
-    margin-top:150px;
+    margin-top:200px;
     flex: 1 1 300px;
     max-width: 500px;
     color: #000000;
@@ -461,7 +462,7 @@ span{
 }
 
 /*responnsivety*/
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     body {
       font-size: 14px;
     }
@@ -494,6 +495,7 @@ span{
         height: 300px;
         border-radius: 6%;
         margin-top: 20px;
+        margin-left:0px;
 
     }
     
