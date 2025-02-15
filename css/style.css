@@ -462,7 +462,7 @@ span{
 }
 
 /*responnsivety*/
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     body {
       font-size: 14px;
     }
@@ -514,6 +514,15 @@ span{
     #about .col-md-6 {
         max-width: 100%; 
     }
+    #about .col-md-6 p{
+        margin: 10px;
+        padding: 60px;
+
+    }
+    #about .col-md-6 img{
+        margin: 50px;
+    }
+    
 
     #offer{
         padding: 10px;
